@@ -14,8 +14,8 @@ $ sudo apt-get update
 note: if apt-get gives ‘Could not get lock /var/lib/dpkg/lock’ error, do the following:
 
 ```bash
-        $ sudo rm /var/lib/dpkg/lock
-        $ sudo dpkg --configure -a
+$ sudo rm /var/lib/dpkg/lock
+$ sudo dpkg --configure -a
 ```
 
 then:
@@ -49,14 +49,14 @@ $ sudo apt-get install ros-kinetic-turtlebot ros-kinetic-turtlebot-apps ros-kine
 
 ## ensure network is configured
 
-
+```bash
 #export ROS_MASTER_URI=http://192.168.1.125:11311    #trail
 #export ROS_HOSTNAME=192.168.1.125
 #export ROS_IP=192.168.1.125
 export ROS_MASTER_URI=http://10.108.19.59:11311     #tusecure
 export ROS_HOSTNAME=10.108.19.59
 export ROS_IP=10.108.19.59
-
+```
 
 ## bringup turtlebot software
 
@@ -83,7 +83,6 @@ $ source ~/.bashrc
 note: you will most likely get an error saying that you need ZED SDK, install at:
 https://www.stereolabs.com/developers/release/#sdkdownloads_anchor        
 if you have CUDA 9.0 (check with $ nvcc --version), install for Jetpack 3.3
-
 once downloaded, install with the following:
 ```bash
 $ cd ~/Downloads
