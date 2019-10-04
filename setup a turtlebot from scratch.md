@@ -2,7 +2,8 @@
 
 
 * make sure ubuntu 16.04.6 is installed
-* install ros kinetic
+
+## install ros kinetic
 
 ```bash
 $ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
@@ -16,6 +17,8 @@ note: if apt-get gives ‘Could not get lock /var/lib/dpkg/lock’ error, do the
         $ sudo rm /var/lib/dpkg/lock
         $ sudo dpkg --configure -a
 ```
+
+then:
 
 ```bash
 $ sudo apt-get install ros-kinetic-desktop-full
@@ -46,14 +49,14 @@ $ sudo apt-get install ros-kinetic-turtlebot ros-kinetic-turtlebot-apps ros-kine
 
 ## ensure network is configured
 
-```bash
+
 #export ROS_MASTER_URI=http://192.168.1.125:11311    #trail
 #export ROS_HOSTNAME=192.168.1.125
 #export ROS_IP=192.168.1.125
 export ROS_MASTER_URI=http://10.108.19.59:11311     #tusecure
 export ROS_HOSTNAME=10.108.19.59
 export ROS_IP=10.108.19.59
-```
+
 
 ## bringup turtlebot software
 
@@ -78,8 +81,9 @@ $ source ~/.bashrc
 ```
 
 note: you will most likely get an error saying that you need ZED SDK, install at:
-        https://www.stereolabs.com/developers/release/#sdkdownloads_anchor
-        if you have CUDA 9.0 (check with $ nvcc --version), install for Jetpack 3.3
+https://www.stereolabs.com/developers/release/#sdkdownloads_anchor        
+if you have CUDA 9.0 (check with $ nvcc --version), install for Jetpack 3.3
+
 once downloaded, install with the following:
 ```bash
 $ cd ~/Downloads
@@ -161,8 +165,10 @@ $ roscd turtlebot_navigation
 $ cd param
 $ sudo vim costmap_common_params.yaml
 ```
-look for the section called observation sources and modify to the following (delete obstacle_range and raytrace_range above this line):
-          observation_sources:  scan camera bump
+look for the section called observation sources and modify to the following 
+```bash
+(delete obstacle_range and raytrace_range above this line):
+observation_sources:  scan camera bump
   scan:
         data_type: LaserScan
         topic: base_scan
@@ -181,7 +187,7 @@ look for the section called observation sources and modify to the following (del
         max_obstacle_height: 0.35
         obstacle_range: 1.0
         raytrace_range: 1.5
-
+```
 
 this should fix the costmaps within rviz.
 
