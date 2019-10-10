@@ -2,14 +2,14 @@
 https://github.com/stereolabs/zed-yolo
 !!!
 
-https://answers.ros.org/question/99211/how-to-combine-a-camera-image-and-a-laser-pointcloud-to-create-a-color-pointcloud/
+* https://answers.ros.org/question/99211/how-to-combine-a-camera-image-and-a-laser-pointcloud-to-create-a-color-pointcloud/
 
-https://github.com/stereolabs/zed-ros-wrapper/issues/370
-https://answers.ros.org/question/191265/pointcloud2-access-data/
-https://pastebin.com/i71RQcU2
+* https://github.com/stereolabs/zed-ros-wrapper/issues/370
+* https://answers.ros.org/question/191265/pointcloud2-access-data/
+* https://pastebin.com/i71RQcU2
 
-https://github.com/stereolabs/zed-examples/tree/master/depth%20sensing
-http://wiki.ros.org/ROSNodeTutorialC%2B%2B
+* https://github.com/stereolabs/zed-examples/tree/master/depth%20sensing
+* http://wiki.ros.org/ROSNodeTutorialC%2B%2B
 
 loop within zed depth sensing node (from main.cpp):
 
